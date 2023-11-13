@@ -16,15 +16,11 @@ class Date {
   }
 
   getChristmasDiscount() {
-    if (this.#theDate <= THE_DATE.christmas) {
-      return (this.#theDate - 1) * 100 + 1000;
-    } else return 0;
+    return this.#theDate <= THE_DATE.christmas ? (this.#theDate - 1) * 100 + 1000 : 0;
   }
 
   getSpecialDiscount() {
-    if (this.#theDate % 7 === WEEK.sunday) {
-      return 1000;
-    } else return 0;
+    return this.#theDate % 7 === WEEK.sunday || this.#theDate === THE_DATE.christmas ? 1000 : 0;
   }
 
   getDayOfWeek() {
