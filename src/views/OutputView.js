@@ -39,7 +39,9 @@ const OutputView = {
   },
   printTotalBenefitAmount(totalBenefitAmount) {
     Console.print(OUTPUT_MESSAGE.totalBenefitAmountTitle);
-    totalBenefitAmount === 0 ? Console.print(`없음`) : Console.print(`-${totalBenefitAmount.toLocaleString("ko-KR")}원`);
+    totalBenefitAmount === 0
+      ? Console.print(`${totalBenefitAmount.toLocaleString("ko-KR")}원`)
+      : Console.print(`-${totalBenefitAmount.toLocaleString("ko-KR")}원`);
     Console.print("");
   },
   printPredictAmount() {
