@@ -1,4 +1,5 @@
 import { Console } from "@woowacourse/mission-utils";
+import { OUTPUT_MESSAGE } from "../constants/message.js";
 
 const OutputView = {
   printHello() {
@@ -7,36 +8,39 @@ const OutputView = {
   printPreviewText() {
     Console.print(OUTPUT_MESSAGE.previewText);
   },
-  printMenu() {
+  printMenu(menuList) {
+    Console.print("");
     Console.print(OUTPUT_MESSAGE.menuTitle);
-    // ...
-    Console.print();
+    menuList.forEach((menu) => {
+      Console.print(`${menu.getName()} ${menu.getNumber()}개`);
+    });
+    Console.print("");
   },
 
   printTotalAmount() {
     Console.print(OUTPUT_MESSAGE.totalAmountTitle);
     // ...
-    Console.print();
+    Console.print("");
   },
   printGiftMenu() {
     Console.print(OUTPUT_MESSAGE.giftMenuTitle);
     // ...
-    Console.print();
+    Console.print("");
   },
   printBenefitsDetail() {
     Console.print(OUTPUT_MESSAGE.benefitsDetailTitle);
     // ...
-    Console.print();
+    Console.print("");
   },
   printTotalBenefitAmount() {
     Console.print(OUTPUT_MESSAGE.totalBenefitAmountTitle);
     // ...
-    Console.print();
+    Console.print("");
   },
   printPredictAmount() {
     Console.print(OUTPUT_MESSAGE.predictAmountTitle);
     // ...
-    Console.print();
+    Console.print("");
   },
   printEventBadge() {
     Console.print(OUTPUT_MESSAGE.eventBadgeTitle);

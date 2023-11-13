@@ -28,6 +28,7 @@ class Date {
       return 1000;
     } else return 0;
   }
+
   getDayOfWeek() {
     return this.#theDate % 7;
   }
