@@ -22,7 +22,7 @@ const OutputView = {
 
   printTotalAmount(totalAmount) {
     Console.print(OUTPUT_MESSAGE.totalAmountTitle);
-    Console.print(`${totalAmount}원`);
+    Console.print(`${totalAmount.toLocaleString("ko-KR")}원`);
     Console.print("");
   },
   printGiftMenu(giftMenu) {
@@ -37,9 +37,9 @@ const OutputView = {
     });
     Console.print("");
   },
-  printTotalBenefitAmount() {
+  printTotalBenefitAmount(totalBenefitAmount) {
     Console.print(OUTPUT_MESSAGE.totalBenefitAmountTitle);
-    // ...
+    Console.print(`-${totalBenefitAmount.toLocaleString("ko-KR")}원`);
     Console.print("");
   },
   printPredictAmount() {

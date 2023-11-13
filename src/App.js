@@ -46,6 +46,7 @@ class App {
     OutputView.printTotalAmount(this.#menuList.getTotalAmount());
     OutputView.printGiftMenu(this.#benefit.getGiftMenu(this.#menuList));
     OutputView.printBenefitsDetail(this.#benefit.getBenefitsDetail(this.#date, this.#menuList));
+    OutputView.printTotalBenefitAmount(this.#benefit.getTotalBenefitAmount(this.#date, this.#menuList));
   }
 }
 
