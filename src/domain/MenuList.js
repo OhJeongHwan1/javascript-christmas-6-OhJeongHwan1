@@ -1,12 +1,12 @@
 import { ERROR_MESSAGE } from "../constants/message.js";
-import { MENU_NUMBER } from "../constants/constant.js";
-import { Console } from "@woowacourse/mission-utils";
+import { MENU_NUMBER, BEVERAGE } from "../constants/constant.js";
 
 class MenuList {
   #menuList;
   constructor(menuList) {
     this.#exceedMenuList(menuList);
     this.#sameMenuList(menuList);
+    this.#checkOnlyBeverage(menuList);
     this.#menuList = menuList;
   }
   #exceedMenuList(menuList) {
@@ -22,6 +22,13 @@ class MenuList {
       throw new Error(ERROR_MESSAGE.errorMenu);
     }
   }
+  #checkOnlyBeverage(menuList) {
+    const beverageList = menuList.filter((menu) => BEVERAGE.includes(menu.getName()));
+    if (beverageList.length === menuList.length) {
+      throw new Error(ERROR_MESSAGE.onlyBeverage);
+    }
+  }
+
   getMenuList() {
     return this.#menuList;
   }

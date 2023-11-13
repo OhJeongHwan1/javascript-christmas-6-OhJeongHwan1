@@ -27,6 +27,12 @@ export const ALL_MENU = [
   { name: "샴페인", price: 25000 },
 ];
 
+export const MAIN = ["티본스테이크", "바비큐립", "해산물파스타", "크리스마스파스타"];
+
+export const DESSERT = ["초코케이크", "아이스크림"];
+
+export const BEVERAGE = ["제로콜라", "레드와인", "샴페인"];
+
 export const WEEK = {
   sunday: 3,
   monday: 4,

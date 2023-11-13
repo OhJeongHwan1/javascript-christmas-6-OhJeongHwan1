@@ -1,6 +1,5 @@
 import { MENU_NUMBER, ALL_MENU } from "../constants/constant.js";
 import { ERROR_MESSAGE } from "../constants/message.js";
-import { Console } from "@woowacourse/mission-utils";
 
 class Menu {
   #name;

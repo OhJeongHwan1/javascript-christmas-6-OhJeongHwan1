@@ -25,14 +25,16 @@ const OutputView = {
     Console.print(`${totalAmount}원`);
     Console.print("");
   },
-  printGiftMenu() {
+  printGiftMenu(giftMenu) {
     Console.print(OUTPUT_MESSAGE.giftMenuTitle);
-    // ...
+    Console.print(giftMenu);
     Console.print("");
   },
-  printBenefitsDetail() {
+  printBenefitsDetail(benefitsDetail) {
     Console.print(OUTPUT_MESSAGE.benefitsDetailTitle);
-    // ...
+    benefitsDetail?.forEach((detail) => {
+      Console.print(detail);
+    });
     Console.print("");
   },
   printTotalBenefitAmount() {
