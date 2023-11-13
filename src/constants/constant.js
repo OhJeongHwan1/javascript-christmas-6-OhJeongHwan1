@@ -4,6 +4,16 @@ export const THE_DATE = {
   christmas: 25,
 };
 
+export const WEEK = {
+  sunday: 3,
+  monday: 4,
+  tuesday: 5,
+  wednesday: 6,
+  thursday: 0,
+  friday: 1,
+  saturday: 2,
+};
+
 export const MENU_NUMBER = {
   minimum: 1,
   maximum: 20,
@@ -33,12 +43,4 @@ export const DESSERT = ["초코케이크", "아이스크림"];
 
 export const BEVERAGE = ["제로콜라", "레드와인", "샴페인"];
 
-export const WEEK = {
-  sunday: 3,
-  monday: 4,
-  tuesday: 5,
-  wednesday: 6,
-  thursday: 0,
-  friday: 1,
-  saturday: 2,
-};
+export const CHAMPAGNE_PRICE = 25000;

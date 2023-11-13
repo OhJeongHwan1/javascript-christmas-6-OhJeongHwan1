@@ -1,4 +1,4 @@
-import { WEEK } from "../constants/constant.js";
+import { WEEK, CHAMPAGNE_PRICE } from "../constants/constant.js";
 
 class Benefit {
   #overLeastAmount;
@@ -22,6 +22,8 @@ class Benefit {
       benefitsDetail.push(`주말 할인: -${menuList.checkMainNumber() * 2023}원`);
     if (date.getDayOfWeek() >= WEEK.sunday || date.getDayOfWeek() === WEEK.thursday)
       benefitsDetail.push(`평일 할인: -${menuList.checkDessertNumber() * 2023}원`);
+    if (date.getSpecialDiscount() === 1000) benefitsDetail.push(`특별 할인: -${date.getSpecialDiscount()}원`);
+    if (menuList.getTotalAmount() >= 120000) benefitsDetail.push(`증정 이벤트 -${CHAMPAGNE_PRICE}원`);
     if (benefitsDetail.length === 0) return ["없음"];
     return benefitsDetail;
   }
