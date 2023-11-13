@@ -15,6 +15,10 @@ class Date {
     }
   }
 
+  getDate() {
+    return this.#theDate;
+  }
+
   getChristmasDiscount() {
     return this.#theDate <= THE_DATE.christmas ? (this.#theDate - 1) * 100 + 1000 : 0;
   }

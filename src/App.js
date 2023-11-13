@@ -41,6 +41,7 @@ class App {
     OutputView.printHello();
     await this.getDate();
     await this.getMenus();
+    OutputView.printPreviewText(this.#date.getDate());
     this.#benefit = new Benefit(this.#menuList);
     OutputView.printMenu(this.#menuList.getMenuList());
     OutputView.printTotalAmount(this.#menuList.getTotalAmount());
