@@ -8,6 +8,9 @@ const OutputView = {
   printPreviewText() {
     Console.print(OUTPUT_MESSAGE.previewText);
   },
+  printErrorMessage(error) {
+    Console.print(error);
+  },
   printMenu(menuList) {
     Console.print("");
     Console.print(OUTPUT_MESSAGE.menuTitle);
@@ -17,9 +20,9 @@ const OutputView = {
     Console.print("");
   },
 
-  printTotalAmount() {
+  printTotalAmount(totalAmount) {
     Console.print(OUTPUT_MESSAGE.totalAmountTitle);
-    // ...
+    Console.print(`${totalAmount}원`);
     Console.print("");
   },
   printGiftMenu() {
