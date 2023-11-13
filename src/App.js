@@ -1,11 +1,10 @@
 import InputView from "./views/InputView.js";
 import OutputView from "./views/OutputView.js";
+import Date from "./domain/Date.js";
+import { Console } from "@woowacourse/mission-utils";
 
 class App {
-  async run() {
-    await InputView.readDate();
-    await InputView.readMenu();
-  }
+  async run() {}
 }
 
 export default App;
