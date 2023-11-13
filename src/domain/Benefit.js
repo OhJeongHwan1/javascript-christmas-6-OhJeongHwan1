@@ -1,3 +1,5 @@
+import { WEEK } from "../constants/constant.js";
+
 class Benefit {
   #overLeastAmount;
 
@@ -16,7 +18,11 @@ class Benefit {
 
     let benefitsDetail = [];
     if (date.getChristmasDiscount() !== 0) benefitsDetail.push(`크리스마스 디데이 할인: -${date.getChristmasDiscount()}원`);
-
+    if (date.getDayOfWeek() === WEEK.friday || date.getDayOfWeek() === WEEK.saturday)
+      benefitsDetail.push(`주말 할인: -${menuList.checkMainNumber() * 2023}원`);
+    if (date.getDayOfWeek() >= WEEK.sunday || date.getDayOfWeek() === WEEK.thursday)
+      benefitsDetail.push(`평일 할인: -${menuList.checkDessertNumber() * 2023}원`);
+    if (benefitsDetail.length === 0) return ["없음"];
     return benefitsDetail;
   }
 }

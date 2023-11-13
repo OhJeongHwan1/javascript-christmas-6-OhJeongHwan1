@@ -1,5 +1,5 @@
 import { ERROR_MESSAGE } from "../constants/message.js";
-import { MENU_NUMBER, BEVERAGE } from "../constants/constant.js";
+import { MENU_NUMBER, BEVERAGE, DESSERT, MAIN } from "../constants/constant.js";
 
 class MenuList {
   #menuList;
@@ -39,6 +39,14 @@ class MenuList {
       totalAmount = totalAmount + menu.getPrice() * menu.getNumber();
     });
     return totalAmount;
+  }
+
+  checkDessertNumber() {
+    return this.#menuList.reduce((sum, menu) => (DESSERT.includes(menu.getName()) ? sum + menu.getNumber() : sum), 0);
+  }
+
+  checkMainNumber() {
+    return this.#menuList.reduce((sum, menu) => (MAIN.includes(menu.getName()) ? sum + menu.getNumber() : sum), 0);
   }
 }
 export default MenuList;
