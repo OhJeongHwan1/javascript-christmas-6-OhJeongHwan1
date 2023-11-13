@@ -1,4 +1,5 @@
 import Discount from "./Discount.js";
+import { BADGE_PRICE } from "../constants/constant.js";
 
 class Benefit {
   #overLeastAmount;
@@ -34,6 +35,20 @@ class Benefit {
     totalBenefitAmount += discount.getEventGiftAmount(menuList);
 
     return totalBenefitAmount;
+  }
+
+  getPredictAmount(date, menuList) {
+    return this.getGiftMenu(menuList) === "샴페인 1개"
+      ? menuList.getTotalAmount() - this.getTotalBenefitAmount(date, menuList) + 25000
+      : menuList.getTotalAmount() - this.getTotalBenefitAmount(date, menuList);
+  }
+
+  getEventBadge(date, menuList) {
+    const totalBenefitAmount = this.getTotalBenefitAmount(date, menuList);
+    if (totalBenefitAmount < BADGE_PRICE.star) return "없음";
+    if (totalBenefitAmount >= BADGE_PRICE.star && totalBenefitAmount < BADGE_PRICE.tree) return "별";
+    if (totalBenefitAmount >= BADGE_PRICE.tree && totalBenefitAmount < BADGE_PRICE.santa) return "트리";
+    if (totalBenefitAmount >= BADGE_PRICE.santa) return "산타";
   }
 }
 export default Benefit;

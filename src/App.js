@@ -48,6 +48,8 @@ class App {
     OutputView.printGiftMenu(this.#benefit.getGiftMenu(this.#menuList));
     OutputView.printBenefitsDetail(this.#benefit.getBenefitsDetail(this.#date, this.#menuList));
     OutputView.printTotalBenefitAmount(this.#benefit.getTotalBenefitAmount(this.#date, this.#menuList));
+    OutputView.printPredictAmount(this.#benefit.getPredictAmount(this.#date, this.#menuList));
+    OutputView.printEventBadge(this.#benefit.getEventBadge(this.#date, this.#menuList));
   }
 }
 

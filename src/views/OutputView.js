@@ -51,17 +51,16 @@ const OutputView = {
     Console.print("");
   },
 
-  printPredictAmount() {
+  printPredictAmount(predictAmount) {
     Console.print(OUTPUT_MESSAGE.predictAmountTitle);
-    // ...
+    Console.print(`${predictAmount.toLocaleString("ko-KR")}원`);
     Console.print("");
   },
 
-  printEventBadge() {
+  printEventBadge(eventBadge) {
     Console.print(OUTPUT_MESSAGE.eventBadgeTitle);
-    // ...
+    Console.print(eventBadge);
   },
-  // ...
 };
 
 export default OutputView;
