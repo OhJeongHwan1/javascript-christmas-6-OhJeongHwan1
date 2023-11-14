@@ -9,9 +9,9 @@ class Menu {
   constructor(name, number) {
     this.validMenuName(name);
     this.validMenuNumber(number);
-    this.setPrice(name);
     this.#name = name;
     this.#number = number;
+    this.#price = this.setPrice(name);
   }
   validMenuName(name) {
     const menuNames = ALL_MENU.map((menu) => menu.name);
@@ -29,7 +29,7 @@ class Menu {
 
   setPrice(name) {
     const foundMenu = ALL_MENU.find((menu) => menu.name === name);
-    this.#price = foundMenu.price;
+    return foundMenu.price;
   }
 
   getName() {

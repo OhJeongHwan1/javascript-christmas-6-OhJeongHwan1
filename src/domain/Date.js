@@ -6,10 +6,10 @@ class Date {
   #theDate;
 
   constructor(input) {
-    this.#validDate(input);
+    this.validDate(input);
     this.#theDate = input;
   }
-  #validDate(input) {
+  validDate(input) {
     const isNumber = /^[1-9]\d*$/;
     if (!(isNumber.test(input) && input >= THE_DATE.first && input <= THE_DATE.end)) {
       throw new Error(ERROR_MESSAGE.errorDate);
