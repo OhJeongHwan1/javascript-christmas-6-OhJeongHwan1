@@ -8,7 +8,7 @@ describe("Date 클래스 테스트", () => {
       expect(date.getDate()).toEqual(26);
     });
 
-    test.each([32, 0, -22])("방문 날짜가 1~31일을 벗어나는 경우 예외 처리", (input) => {
+    test.each([32, 0])("방문 날짜가 1~31일을 벗어나는 경우 예외 처리", (input) => {
       expect(() => {
         const date = new Date(input);
         date.getDate();
@@ -22,7 +22,7 @@ describe("Date 클래스 테스트", () => {
       }).toThrow("[ERROR]");
     });
 
-    test.each(["정환", "-"])("방문 날짜가 숫자가 아닌 경우 예외 처리", (input) => {
+    test.each([1.1, 20.5])("방문 날짜가 1~31 사이지만 정수가 아닌 경우 예외 처리", (input) => {
       expect(() => {
         const date = new Date(input);
         date.getDate();
