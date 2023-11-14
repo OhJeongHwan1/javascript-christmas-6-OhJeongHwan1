@@ -1,6 +1,5 @@
 import { ERROR_MESSAGE } from "../constants/message.js";
 import { THE_DATE, WEEK } from "../constants/constant.js";
-import { Console } from "@woowacourse/mission-utils";
 
 class Date {
   #theDate;
