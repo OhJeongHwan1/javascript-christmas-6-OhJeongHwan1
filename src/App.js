@@ -18,7 +18,8 @@ class App {
   async getDate() {
     while (true) {
       try {
-        this.#date = new Date(Number(await InputView.readDate()));
+        const inputDate = await InputView.readDate();
+        this.#date = new Date(Number(inputDate));
         break;
       } catch (error) {
         OutputView.printErrorMessage(error.message);
