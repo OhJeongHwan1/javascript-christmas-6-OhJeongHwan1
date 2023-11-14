@@ -1,5 +1,4 @@
 import Menu from "../src/domain/Menu.js";
-import { ALL_MENU } from "../src/constants/constant";
 
 describe("Menu 클래스 테스트", () => {
   describe("메뉴 유효성 검사", () => {
