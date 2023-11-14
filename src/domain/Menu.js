@@ -21,7 +21,8 @@ class Menu {
   }
 
   #validMenuNumber(number) {
-    if (!(number >= MENU_NUMBER.minimum)) {
+    const isNumber = /^[1-9]\d*$/;
+    if (!(isNumber.test(number) && number >= MENU_NUMBER.minimum)) {
       throw new Error(ERROR_MESSAGE.errorMenu);
     }
   }

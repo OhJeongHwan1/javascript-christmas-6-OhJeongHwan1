@@ -11,6 +11,7 @@ class Benefit {
   getGiftMenu(menuList) {
     return menuList.getTotalAmount() >= 120000 ? "샴페인 1개" : "없음";
   }
+
   getBenefitsDetail(date, menuList) {
     if (!this.#overLeastAmount) return ["없음"];
     const discount = new Discount();
