@@ -61,6 +61,16 @@ const OutputView = {
     Console.print(OUTPUT_MESSAGE.eventBadgeTitle);
     Console.print(eventBadge);
   },
+
+  printAllBenefit(date, menuList, benefit) {
+    this.printMenu(menuList.getMenuList());
+    this.printTotalAmount(menuList.getTotalAmount());
+    this.printGiftMenu(benefit.getGiftMenu(menuList));
+    this.printBenefitsDetail(benefit.getBenefitsDetail(date, menuList));
+    this.printTotalBenefitAmount(benefit.getTotalBenefitAmount(date, menuList));
+    this.printPredictAmount(benefit.getPredictAmount(date, menuList));
+    this.printEventBadge(benefit.getEventBadge(date, menuList));
+  },
 };
 
 export default OutputView;

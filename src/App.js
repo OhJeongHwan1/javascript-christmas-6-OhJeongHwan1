@@ -19,8 +19,7 @@ class App {
     while (true) {
       try {
         const inputDate = await InputView.readDate();
-        this.#date = new Date(Number(inputDate));
-        break;
+        return new Date(Number(inputDate));
       } catch (error) {
         OutputView.printErrorMessage(error.message);
       }
@@ -30,8 +29,7 @@ class App {
     while (true) {
       try {
         const menuslider = new MenuSlider();
-        this.#menuList = new MenuList(await menuslider.getSlideMenu());
-        break;
+        return new MenuList(await menuslider.getSlideMenu());
       } catch (error) {
         OutputView.printErrorMessage(error.message);
       }
@@ -40,17 +38,11 @@ class App {
 
   async run() {
     OutputView.printHello();
-    await this.getDate();
-    await this.getMenus();
+    this.#date = await this.getDate();
+    this.#menuList = await this.getMenus();
     OutputView.printPreviewText(this.#date.getDate());
     this.#benefit = new Benefit(this.#menuList);
-    OutputView.printMenu(this.#menuList.getMenuList());
-    OutputView.printTotalAmount(this.#menuList.getTotalAmount());
-    OutputView.printGiftMenu(this.#benefit.getGiftMenu(this.#menuList));
-    OutputView.printBenefitsDetail(this.#benefit.getBenefitsDetail(this.#date, this.#menuList));
-    OutputView.printTotalBenefitAmount(this.#benefit.getTotalBenefitAmount(this.#date, this.#menuList));
-    OutputView.printPredictAmount(this.#benefit.getPredictAmount(this.#date, this.#menuList));
-    OutputView.printEventBadge(this.#benefit.getEventBadge(this.#date, this.#menuList));
+    OutputView.printAllBenefit(this.#date, this.#menuList, this.#benefit);
   }
 }
 
