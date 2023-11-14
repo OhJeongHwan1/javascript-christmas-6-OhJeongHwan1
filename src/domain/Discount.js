@@ -29,7 +29,7 @@ class Discount {
 
   addEventGift(benefitsDetail, menuList) {
     if (menuList.getTotalAmount() >= 120000) {
-      benefitsDetail.push(`증정 이벤트 -${CHAMPAGNE_PRICE.toLocaleString("ko-KR")}원`);
+      benefitsDetail.push(`증정 이벤트: -${CHAMPAGNE_PRICE.toLocaleString("ko-KR")}원`);
     }
   }
 
