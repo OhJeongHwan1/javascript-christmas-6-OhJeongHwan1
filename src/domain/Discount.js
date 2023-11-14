@@ -10,7 +10,7 @@ class Discount {
   }
 
   addWeekendDiscount(benefitsDetail, date, menuList) {
-    if ((date.getDayOfWeek() === WEEK.friday || date.getDayOfWeek() === WEEK.saturday) && menuList.checkDessertNumber() > 0) {
+    if ((date.getDayOfWeek() === WEEK.friday || date.getDayOfWeek() === WEEK.saturday) && menuList.checkMainNumber() > 0) {
       benefitsDetail.push(`주말 할인: -${(menuList.checkMainNumber() * 2023).toLocaleString("ko-KR")}원`);
     }
   }
