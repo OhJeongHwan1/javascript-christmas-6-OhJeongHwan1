@@ -11,15 +11,16 @@ class MenuSlider {
     const menuList = [];
 
     splitMenus.forEach((menu) => {
+      this.checkMenuFormat(menu);
       let [name, number] = menu.split("-");
-      this.#checkMenuFormat(name, number);
       menuList.push(new Menu(name.trim(), Number(number)));
     });
 
     return menuList;
   }
 
-  #checkMenuFormat(name, number) {
+  checkMenuFormat(menu) {
+    let [name, number] = menu.split("-");
     if (!(name && number)) {
       throw new Error(`${ERROR_MESSAGE.errorMenu}`);
     }

@@ -7,27 +7,27 @@ class Menu {
   #price;
 
   constructor(name, number) {
-    this.#validMenuName(name);
-    this.#validMenuNumber(number);
-    this.#setPrice(name);
+    this.validMenuName(name);
+    this.validMenuNumber(number);
+    this.setPrice(name);
     this.#name = name;
     this.#number = number;
   }
-  #validMenuName(name) {
+  validMenuName(name) {
     const menuNames = ALL_MENU.map((menu) => menu.name);
     if (!menuNames.includes(name)) {
       throw new Error(ERROR_MESSAGE.errorMenu);
     }
   }
 
-  #validMenuNumber(number) {
+  validMenuNumber(number) {
     const isNumber = /^[1-9]\d*$/;
     if (!(isNumber.test(number) && number >= MENU_NUMBER.minimum)) {
       throw new Error(ERROR_MESSAGE.errorMenu);
     }
   }
 
-  #setPrice(name) {
+  setPrice(name) {
     const foundMenu = ALL_MENU.find((menu) => menu.name === name);
     this.#price = foundMenu.price;
   }
