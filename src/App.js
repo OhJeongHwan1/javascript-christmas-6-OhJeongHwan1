@@ -40,7 +40,7 @@ class App {
     OutputView.printHello();
     this.#date = await this.getDate();
     this.#menuList = await this.getMenus();
-    OutputView.printPreviewText(this.#date.getDate());
+    OutputView.printPreviewText(this.#date);
     this.#benefit = new Benefit(this.#menuList);
     OutputView.printAllBenefit(this.#date, this.#menuList, this.#benefit);
   }

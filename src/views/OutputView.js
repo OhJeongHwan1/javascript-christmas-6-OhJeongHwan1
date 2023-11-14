@@ -7,7 +7,7 @@ const OutputView = {
   },
 
   printPreviewText(date) {
-    Console.print(`12월 ${date}일에 우테코 식당에서 받을 이벤트 혜택 미리 보기!\n`);
+    Console.print(`12월 ${date.getDate()}일에 우테코 식당에서 받을 이벤트 혜택 미리 보기!\n`);
   },
 
   printErrorMessage(error) {
