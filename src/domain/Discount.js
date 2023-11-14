@@ -34,7 +34,7 @@ class Discount {
   }
 
   getChristmasDiscountAmount(date) {
-    return date.getChristmasDiscount() !== 0 ? date.getChristmasDiscount() : 0;
+    return date.getChristmasDiscount();
   }
 
   getWeekendDiscountAmount(date, menuList) {
@@ -46,7 +46,7 @@ class Discount {
   }
 
   getSpecialDiscountAmount(date) {
-    return date.getSpecialDiscount() === 1000 ? date.getSpecialDiscount() : 0;
+    return date.getSpecialDiscount();
   }
 
   getEventGiftAmount(menuList) {
