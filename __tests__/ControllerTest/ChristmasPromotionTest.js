@@ -1,4 +1,4 @@
-import ChristmasPromotion from "../../src/controller/ChristmasPromotion";
+import ChristmasPromotion from "../../src/controller/ChristmasPromotion.js";
 import { MissionUtils } from "@woowacourse/mission-utils";
 import { EOL as LINE_SEPARATOR } from "os";
 
