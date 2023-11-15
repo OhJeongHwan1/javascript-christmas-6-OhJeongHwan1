@@ -1,19 +1,15 @@
 import Discount from "./Discount.js";
-import { BADGE_PRICE } from "../constants/constant.js";
+import { BADGE_PRICE, LEAST_AMOUNT } from "../constants/constant.js";
 
 class Benefit {
-  #overLeastAmount;
-
-  constructor(menuList) {
-    this.#overLeastAmount = menuList.getTotalAmount() >= 10000;
-  }
+  constructor() {}
 
   getGiftMenu(menuList) {
     return menuList.getTotalAmount() >= 120000 ? "샴페인 1개" : "없음";
   }
 
   getBenefitsDetail(date, menuList) {
-    if (!this.#overLeastAmount) return ["없음"];
+    if (menuList.getTotalAmount() < LEAST_AMOUNT) return ["없음"];
     const discount = new Discount();
     const benefitsDetail = [];
     discount.addChristmasDiscount(benefitsDetail, date);
@@ -26,7 +22,7 @@ class Benefit {
   }
 
   getTotalBenefitAmount(date, menuList) {
-    if (!this.#overLeastAmount) return 0;
+    if (menuList.getTotalAmount() < LEAST_AMOUNT) return 0;
     const discount = new Discount();
     let totalBenefitAmount = 0;
     totalBenefitAmount += discount.getChristmasDiscountAmount(date);
