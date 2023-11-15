@@ -12,7 +12,7 @@ class ChristmasPromotion {
     this.#date = 0;
     this.#menuList = [];
   }
-  async getDate() {
+  async inputDate() {
     while (true) {
       try {
         const inputDate = await InputView.readDate();
@@ -22,7 +22,7 @@ class ChristmasPromotion {
       }
     }
   }
-  async getMenus() {
+  async inputMenus() {
     while (true) {
       try {
         return new MenuList(await MenuSlider.getSlideMenu());
@@ -34,8 +34,8 @@ class ChristmasPromotion {
 
   async play() {
     OutputView.printHello();
-    this.#date = await this.getDate();
-    this.#menuList = await this.getMenus();
+    this.#date = await this.inputDate();
+    this.#menuList = await this.inputMenus();
     OutputView.printPreviewText(this.#date);
     OutputView.printAllBenefit(this.#date, this.#menuList);
   }
