@@ -1,5 +1,5 @@
-import MenuList from "../src/domain/MenuList.js";
-import Menu from "../src/domain/Menu.js";
+import MenuList from "../../src/domain/MenuList.js";
+import Menu from "../../src/domain/Menu.js";
 
 describe("MenuList 클래스 테스트", () => {
   describe("메뉴 리스트 유효성 검사", () => {

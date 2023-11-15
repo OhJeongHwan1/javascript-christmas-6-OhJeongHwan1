@@ -1,5 +1,5 @@
-import Date from "../src/domain/Date.js";
-import { WEEK } from "../src/constants/constant.js";
+import Date from "../../src/domain/Date.js";
+import { WEEK } from "../../src/constants/constant.js";
 
 describe("Date 클래스 테스트", () => {
   describe("방문 날짜 유효성 검사", () => {

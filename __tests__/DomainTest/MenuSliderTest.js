@@ -1,4 +1,4 @@
-import MenuSlider from "../src/domain/MenuSlider.js";
+import MenuSlider from "../../src/domain/MenuSlider.js";
 import { MissionUtils } from "@woowacourse/mission-utils";
 
 const mockQuestions = (inputs) => {

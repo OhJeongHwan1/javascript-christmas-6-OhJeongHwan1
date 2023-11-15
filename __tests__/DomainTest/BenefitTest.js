@@ -1,7 +1,7 @@
-import Benefit from "../src/domain/Benefit.js";
-import Date from "../src/domain/Date.js";
-import MenuList from "../src/domain/MenuList.js";
-import Menu from "../src/domain/Menu.js";
+import Benefit from "../../src/domain/Benefit.js";
+import Date from "../../src/domain/Date.js";
+import MenuList from "../../src/domain/MenuList.js";
+import Menu from "../../src/domain/Menu.js";
 
 const EXAMPLE_MENU_LIST_1 = [
   new Menu("티본스테이크", 1),
