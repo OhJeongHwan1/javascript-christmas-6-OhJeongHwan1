@@ -57,6 +57,12 @@ describe("Benefit 클래스 테스트", () => {
 
       expect(benefitsDetail[0]).toEqual("없음");
     });
+
+    test("10000원 이상이지만 혜택 내역이 없는 경우", () => {
+      const benefitsDetail = Benefit.getBenefitsDetail(new Date(29), new MenuList(EXAMPLE_MENU_LIST_4));
+
+      expect(benefitsDetail[0]).toEqual("없음");
+    });
   });
 
   describe("getTotalBenefitAmount() 테스트", () => {

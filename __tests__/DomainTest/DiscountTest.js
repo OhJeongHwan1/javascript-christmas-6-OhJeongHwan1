@@ -12,11 +12,18 @@ const EXAMPLE_MENU_LIST = [
 
 describe("Discount 클래스 테스트", () => {
   describe("배열에 출력값 추가해주는 함수들 테스트", () => {
-    test("addChristmasDiscount() 테스트: 배열에 크리스마스 디데이 할인 추가", () => {
+    test("addChristmasDiscount() 테스트 1: 배열에 크리스마스 디데이 할인 추가", () => {
       const array = [];
       Discount.addChristmasDiscount(array, new Date(25));
 
       expect(array[0]).toEqual(`크리스마스 디데이 할인: -3,400원`);
+    });
+
+    test("addChristmasDiscount() 테스트 2: 배열에 크리스마스 디데이 할인을 추가하지 않는 경우", () => {
+      const array = [];
+      Discount.addChristmasDiscount(array, new Date(26));
+
+      expect(array).toEqual([]);
     });
 
     test("addWeekendDiscount() 테스트: 배열에 주말 할인 추가", () => {
