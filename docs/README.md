@@ -92,36 +92,40 @@
 
 # 폴더 구조
 
-```📦src
-┣ 📂constants
-┃ ┣ 📜constant.js
-┃ ┗ 📜message.js
-┣ 📂controller
-┃ ┗ 📜ChristmasPromotion.js
-┣ 📂domain
-┃ ┣ 📜Benefit.js
-┃ ┣ 📜Date.js
-┃ ┣ 📜Discount.js
-┃ ┣ 📜Menu.js
-┃ ┣ 📜MenuList.js
-┃ ┗ 📜MenuSlider.js
-┣ 📂views
-┃ ┣ 📜InputView.js
-┃ ┗ 📜OutputView.js
-┣ 📜App.js
-┗ 📜index.js
-
-📦**tests**
-┣ 📂ControllerTest
-┃ ┗ 📜ChristmasPromotionTest.js
-┣ 📂DomainTest
-┃ ┣ 📜BenefitTest.js
-┃ ┣ 📜DateTest.js
-┃ ┣ 📜DiscountTest.js
-┃ ┣ 📜MenuListTest.js
-┃ ┣ 📜MenuSliderTest.js
-┃ ┗ 📜MenuTest.js
-┣ 📂ViewsTest
-┃ ┗ 📜OutPutViewTest.js
-┗ 📜ApplicationTest.js
-```
+- 테스트 폴더 구조
+  ```
+  📦__tests__
+  ┣ 📂ControllerTest
+  ┃ ┗ 📜ChristmasPromotionTest.js
+  ┣ 📂DomainTest
+  ┃ ┣ 📜BenefitTest.js
+  ┃ ┣ 📜DateTest.js
+  ┃ ┣ 📜DiscountTest.js
+  ┃ ┣ 📜MenuListTest.js
+  ┃ ┣ 📜MenuSliderTest.js
+  ┃ ┗ 📜MenuTest.js
+  ┣ 📂ViewsTest
+  ┃ ┗ 📜OutPutViewTest.js
+  ┗ 📜ApplicationTest.js
+  ```
+- 애플리케이션 폴더 구조
+  ```
+  📦src
+  ┣ 📂constants
+  ┃ ┣ 📜constant.js
+  ┃ ┗ 📜message.js
+  ┣ 📂controller
+  ┃ ┗ 📜ChristmasPromotion.js
+  ┣ 📂domain
+  ┃ ┣ 📜Benefit.js
+  ┃ ┣ 📜Date.js
+  ┃ ┣ 📜Discount.js
+  ┃ ┣ 📜Menu.js
+  ┃ ┣ 📜MenuList.js
+  ┃ ┗ 📜MenuSlider.js
+  ┣ 📂views
+  ┃ ┣ 📜InputView.js
+  ┃ ┗ 📜OutputView.js
+  ┣ 📜App.js
+  ┗ 📜index.js
+  ```
