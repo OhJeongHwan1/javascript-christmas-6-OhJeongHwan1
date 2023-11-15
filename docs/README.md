@@ -92,7 +92,7 @@
 
 # 폴더 구조
 
-📦src
+```📦src
 ┣ 📂constants
 ┃ ┣ 📜constant.js
 ┃ ┗ 📜message.js
@@ -124,3 +124,4 @@
 ┣ 📂ViewsTest
 ┃ ┗ 📜OutPutViewTest.js
 ┗ 📜ApplicationTest.js
+```
