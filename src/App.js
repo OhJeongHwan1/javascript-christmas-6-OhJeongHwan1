@@ -1,4 +1,4 @@
-import ChristmasPromotion from "./controller/ChristmasPromotion";
+import ChristmasPromotion from "./controller/ChristmasPromotion.js";
 
 class App {
   async run() {
