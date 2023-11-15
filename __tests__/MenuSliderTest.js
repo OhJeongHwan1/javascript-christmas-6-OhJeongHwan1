@@ -15,8 +15,7 @@ describe("MenuSlider 클래스 테스트", () => {
   describe("checkMenuFormat()  테스트", () => {
     test.each(["티본스테이크=1", "티본스테이크1-", "티본스테이크 1개"])("메뉴 형식이 올바르지 않은 경우 예외 처리", (input) => {
       expect(() => {
-        const menuSlider = new MenuSlider();
-        menuSlider.checkMenuFormat(input);
+        MenuSlider.checkMenuFormat(input);
       }).toThrow("[ERROR]");
     });
   });
@@ -24,8 +23,8 @@ describe("MenuSlider 클래스 테스트", () => {
   describe("메뉴 입력 테스트", () => {
     test("메뉴 입력이 정상적인 경우", async () => {
       mockQuestions(["티본스테이크-1,바비큐립-1,초코케이크-2,제로콜라-1"]);
-      const menuSlider = new MenuSlider();
-      const menuList = await menuSlider.getSlideMenu();
+      const menuList = await MenuSlider.getSlideMenu();
+
       expect(
         menuList.map((menu) => {
           return `${menu.getName()} ${menu.getNumber()}개`;
@@ -36,8 +35,7 @@ describe("MenuSlider 클래스 테스트", () => {
     test("메뉴 입력이 유효하지 않은 경우", async () => {
       mockQuestions(["티본스테이크-1,바비큐립-1,초코케이크-2,제로콜라-"]);
 
-      const menuSlider = new MenuSlider();
-      await expect(menuSlider.getSlideMenu()).rejects.toThrow("[ERROR]");
+      await expect(MenuSlider.getSlideMenu()).rejects.toThrow("[ERROR]");
     });
   });
 });

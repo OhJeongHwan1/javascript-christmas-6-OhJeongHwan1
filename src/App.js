@@ -3,17 +3,14 @@ import MenuList from "./domain/MenuList.js";
 import Date from "./domain/Date.js";
 import OutputView from "./views/OutputView.js";
 import InputView from "./views/InputView.js";
-import Benefit from "./domain/Benefit.js";
 
 class App {
   #date;
   #menuList;
-  #benefit;
 
   constructor() {
     this.#date = 0;
     this.#menuList = [];
-    this.#benefit = null;
   }
   async getDate() {
     while (true) {
@@ -28,8 +25,7 @@ class App {
   async getMenus() {
     while (true) {
       try {
-        const menuslider = new MenuSlider();
-        return new MenuList(await menuslider.getSlideMenu());
+        return new MenuList(await MenuSlider.getSlideMenu());
       } catch (error) {
         OutputView.printErrorMessage(error.message);
       }
@@ -41,8 +37,7 @@ class App {
     this.#date = await this.getDate();
     this.#menuList = await this.getMenus();
     OutputView.printPreviewText(this.#date);
-    this.#benefit = new Benefit();
-    OutputView.printAllBenefit(this.#date, this.#menuList, this.#benefit);
+    OutputView.printAllBenefit(this.#date, this.#menuList);
   }
 }
 

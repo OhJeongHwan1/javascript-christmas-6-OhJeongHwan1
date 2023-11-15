@@ -3,9 +3,7 @@ import Menu from "./Menu.js";
 import { ERROR_MESSAGE } from "../constants/message.js";
 
 class MenuSlider {
-  constructor() {}
-
-  async getSlideMenu() {
+  static async getSlideMenu() {
     const menus = await InputView.readMenu();
     const splitMenus = menus.split(",");
     const menuList = [];
@@ -19,7 +17,7 @@ class MenuSlider {
     return menuList;
   }
 
-  checkMenuFormat(menu) {
+  static checkMenuFormat(menu) {
     let [name, number] = menu.split("-");
     if (!(name && number)) {
       throw new Error(`${ERROR_MESSAGE.errorMenu}`);

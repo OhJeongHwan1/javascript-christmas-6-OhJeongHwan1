@@ -1,5 +1,6 @@
 import { Console } from "@woowacourse/mission-utils";
 import { OUTPUT_MESSAGE } from "../constants/message.js";
+import Benefit from "../domain/Benefit.js";
 
 const OutputView = {
   printHello() {
@@ -62,14 +63,14 @@ const OutputView = {
     Console.print(eventBadge);
   },
 
-  printAllBenefit(date, menuList, benefit) {
+  printAllBenefit(date, menuList) {
     this.printMenu(menuList.getMenuList());
     this.printTotalAmount(menuList.getTotalAmount());
-    this.printGiftMenu(benefit.getGiftMenu(menuList));
-    this.printBenefitsDetail(benefit.getBenefitsDetail(date, menuList));
-    this.printTotalBenefitAmount(benefit.getTotalBenefitAmount(date, menuList));
-    this.printPredictAmount(benefit.getPredictAmount(date, menuList));
-    this.printEventBadge(benefit.getEventBadge(date, menuList));
+    this.printGiftMenu(Benefit.getGiftMenu(menuList));
+    this.printBenefitsDetail(Benefit.getBenefitsDetail(date, menuList));
+    this.printTotalBenefitAmount(Benefit.getTotalBenefitAmount(date, menuList));
+    this.printPredictAmount(Benefit.getPredictAmount(date, menuList));
+    this.printEventBadge(Benefit.getEventBadge(date, menuList));
   },
 };
 
