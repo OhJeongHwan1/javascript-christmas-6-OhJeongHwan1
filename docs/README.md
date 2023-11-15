@@ -95,17 +95,17 @@
 - 테스트 폴더 구조
   ```
   📦__tests__
-  ┣ 📂ControllerTest
+  ┣ 📂controllerTest
   ┃ ┗ 📜ChristmasPromotionTest.js
-  ┣ 📂DomainTest
+  ┣ 📂domainTest
   ┃ ┣ 📜BenefitTest.js
   ┃ ┣ 📜DateTest.js
   ┃ ┣ 📜DiscountTest.js
   ┃ ┣ 📜MenuListTest.js
   ┃ ┣ 📜MenuSliderTest.js
   ┃ ┗ 📜MenuTest.js
-  ┣ 📂ViewsTest
-  ┃ ┗ 📜OutPutViewTest.js
+  ┣ 📂viewsTest
+  ┃ ┗ 📜OutputViewTest.js
   ┗ 📜ApplicationTest.js
   ```
 - 애플리케이션 폴더 구조
