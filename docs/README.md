@@ -92,36 +92,35 @@
 
 # 폴더 구조
 
-├── tests
-│ ├── ControllerTest
-│ │ └── ChristmasPromotionTest.js
-│ ├── DomainTest
-│ │ ├── BenefitTest.js
-│ │ ├── DateTest.js
-│ │ ├── DiscountTest.js
-│ │ ├── MenuListTest.js
-│ │ ├── MenuSliderTest.js
-│ │ └── MenuTest.js
-│ ├── ViewsTest
-│ │ └── OutputViewTest.js
-│ └── ApplicationTest.js
-├── docs
-│ └── README.md
-├── src
-│ ├── constants
-│ │ ├── constant.js
-│ │ └── message.js
-│ ├── controller
-│ │ └── ChristmasPromotion.js
-│ ├── domain
-│ │ ├── Benefit.js
-│ │ ├── Date.js
-│ │ ├── Discount.js
-│ │ ├── Menu.js
-│ │ ├── MenuList.js
-│ │ └── MenuSlider.js
-│ └── views
-│ ├── InputView.js
-│ └── OutputView.js
-├── App.js
-├── index.js
+📦src
+┣ 📂constants
+┃ ┣ 📜constant.js
+┃ ┗ 📜message.js
+┣ 📂controller
+┃ ┗ 📜ChristmasPromotion.js
+┣ 📂domain
+┃ ┣ 📜Benefit.js
+┃ ┣ 📜Date.js
+┃ ┣ 📜Discount.js
+┃ ┣ 📜Menu.js
+┃ ┣ 📜MenuList.js
+┃ ┗ 📜MenuSlider.js
+┣ 📂views
+┃ ┣ 📜InputView.js
+┃ ┗ 📜OutputView.js
+┣ 📜App.js
+┗ 📜index.js
+
+📦**tests**
+┣ 📂ControllerTest
+┃ ┗ 📜ChristmasPromotionTest.js
+┣ 📂DomainTest
+┃ ┣ 📜BenefitTest.js
+┃ ┣ 📜DateTest.js
+┃ ┣ 📜DiscountTest.js
+┃ ┣ 📜MenuListTest.js
+┃ ┣ 📜MenuSliderTest.js
+┃ ┗ 📜MenuTest.js
+┣ 📂ViewsTest
+┃ ┗ 📜OutPutViewTest.js
+┗ 📜ApplicationTest.js
